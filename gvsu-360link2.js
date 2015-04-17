@@ -6,6 +6,9 @@ setTimeout(function() {
 		
 		// Hide browse journal chunks and set click event to show them
 		jQuery('.link-details.hide').hide();
+		
+		// Add a mailto: link to the custom links at the bottom, since ProQuest won't let you using their custom links tool (Lame)
+		jQuery('.custom-links').find('div:only-of-type').append('<div class="gvsu-custom-link"><a href="mailto:erms@gvsu.edu?subject=Problem%20Linking%20to%20Full%20Text&amp;body=' + encodeURIComponent(location.pathname) + encodeURIComponent(location.search) + '">Found a problem? Let our crack team of link-fixers know!</a>');
 	
 		// Fix the poorly worded 'not available' link
 		if(jQuery('body').length > 0) {
