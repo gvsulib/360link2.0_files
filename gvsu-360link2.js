@@ -3,6 +3,9 @@ setTimeout(function() {
 	
 		// Remove bootstrap and all the other crappy CSS they load, but keep ours
 		jQuery('head').find('link:nth-of-type(-n+4)').remove();
+		
+		// Hide browse journal chunks and set click event to show them
+		jQuery('.link-details.hide').hide();
 	
 		// Fix the poorly worded 'not available' link
 		if(jQuery('body').length > 0) {
