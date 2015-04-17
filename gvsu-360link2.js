@@ -17,4 +17,4 @@ setTimeout(function() {
 		}
 
 	});
-}, 800);
+}, 400);
