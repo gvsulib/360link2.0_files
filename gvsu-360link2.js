@@ -22,7 +22,7 @@ setTimeout(function() {
 		
 		// Fix the bad label on Print items	when only one print item is available	
 		jQuery(".resource-name:contains('Print Journal at GVSU Libraries')").contents().filter(function () {
-		     return this.nodeType === 3;
+		     return this.nodeType === 2;
 		}).remove();
 		
 		jQuery(".resource-name:contains('Print Journal at GVSU Libraries')").text('in Print at GVSU Libraries');
