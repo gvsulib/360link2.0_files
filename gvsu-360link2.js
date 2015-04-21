@@ -16,8 +16,9 @@ setTimeout(function() {
 		// Fix the bad label on Print items		
 		jQuery(".resource-description-text:contains('Print Journal at GVSU Libraries')").contents().filter(function () {
 		     return this.nodeType === 3;
-		     jQuery(this).find('resource-name').text('in Print at GVSU Libraries');
 		}).remove();
+		
+		jQuery(".resource-description-text:contains('Print Journal at GVSU Libraries')").text('in Print at GVSU Libraries');
 	
 		// Fix the poorly worded 'not available' link
 		if(jQuery('body').length > 0) {
