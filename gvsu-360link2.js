@@ -13,8 +13,11 @@ setTimeout(function() {
 		// Attempt to style the elementless heading that divides browse and full text
 		jQuery('div.resource-row:contains("Browse the online journal by issue or volume")').css('font-weight', 'bold').css('font-size', '1.2em').find('a').css('font-size','.9em').next('.resource-description-text').css('font-weight','normal').css('font-size','.8em');
 		
-		// Fix the bad label on Print items
-		jQuery('.resource-name:contains("Print Journal at GVSU Libraries")').text('in Print at GVSU Libraries');
+		// Fix the bad label on Print items		
+		jQuery(".resource-description-text:contains('Print Journal at GVSU Libraries')").contents().filter(function () {
+		     return this.nodeType === 3;
+		     jQuery(this).find('resource-name').text('in Print at GVSU Libraries');
+		}).remove();
 	
 		// Fix the poorly worded 'not available' link
 		if(jQuery('body').length > 0) {
