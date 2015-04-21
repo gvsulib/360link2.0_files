@@ -11,21 +11,21 @@ setTimeout(function() {
 		jQuery('.custom-links').find('div:only-of-type').append('<div class="gvsu-custom-link"><a href="mailto:erms@gvsu.edu?subject=Problem%20Linking%20to%20Full%20Text&amp;body=' + encodeURIComponent(location.pathname) + encodeURIComponent(location.search) + '">Found a problem? Let our crack team of link-fixers know!</a>');
 		
 		// Attempt to style the elementless heading that divides browse and full text
-		jQuery('div.resource-row:contains("Browse the online journal by issue or volume")').css('font-weight', 'bold').css('font-size', '1.2em').find('a').css('font-size','.9em').next('.resource-description-text').css('font-weight','normal').css('font-size','.8em');
+		jQuery('#more-options div.resource-row:contains("Browse the online journal by issue or volume")').css('font-weight', 'bold').css('font-size', '1.2em').find('a').css('font-size','.9em').next('.resource-description-text').css('font-weight','normal').css('font-size','.8em');
 		
 		// Fix the bad label on Print items		
-		jQuery(".resource-description-text:contains('Print Journal at GVSU Libraries')").contents().filter(function () {
+		jQuery("#more-options").find(".resource-description-text:contains('Print Journal at GVSU Libraries')").contents().filter(function () {
 		     return this.nodeType === 3;
 		}).remove();
 		
 		jQuery(".resource-description-text:contains('Print Journal at GVSU Libraries')").text('in Print at GVSU Libraries');
 		
 		// Fix the bad label on Print items	when only one print item is available	
-		jQuery(".resource-row:contains('Print Journal at GVSU Libraries')").contents().filter(function () {
-		     return this.nodeType === 2;
+		jQuery(".single-results .resource-row:contains('Print Journal at GVSU Libraries')").contents().filter(function () {
+		     return this.nodeType === 3;
 		}).remove();
 		
-		jQuery(".resource-name:contains('Print Journal at GVSU Libraries')").text('in Print at GVSU Libraries');
+		jQuery(".single-results .resource-name:contains('Print Journal at GVSU Libraries')").text('in Print at GVSU Libraries');
 		
 	
 		// Fix the poorly worded 'not available' link
