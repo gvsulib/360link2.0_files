@@ -24,6 +24,9 @@ setTimeout(function() {
 		jQuery(".single-results .resource-row:contains('Print Journal at GVSU Libraries')").contents().filter(function () {
 		     return this.nodeType === 3;
 		}).remove();
+		jQuery(".single-results .resource-row:contains('Print Journal at GVSU Libraries')").find('.resource-description-button').contents().filter(function () {
+		     return this.nodeType === 3;
+		}).remove();
 		
 		jQuery(".single-results .resource-name:contains('Print Journal at GVSU Libraries')").text('in Print at GVSU Libraries');
 		
