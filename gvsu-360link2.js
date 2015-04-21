@@ -18,7 +18,7 @@ setTimeout(function() {
 		     return this.nodeType === 3;
 		}).remove();
 		
-		jQuery(".resource-description-text:contains('Print Journal at GVSU Libraries')").text('in Print at GVSU Libraries');
+		jQuery(".resource-description-text:contains('Print Journal at GVSU Libraries')").text(' in Print at GVSU Libraries');
 		
 		// Fix the bad label on Print items	when only one print item is available	
 		jQuery(".single-results .resource-row:contains('Print Journal at GVSU Libraries')").contents().filter(function () {
@@ -28,7 +28,7 @@ setTimeout(function() {
 		     return this.nodeType === 3;
 		}).remove();
 		
-		jQuery(".single-results .resource-name:contains('Print Journal at GVSU Libraries')").text('in Print at GVSU Libraries');
+		jQuery(".single-results .resource-name:contains('Print Journal at GVSU Libraries')").text(' in Print at GVSU Libraries');
 		
 	
 		// Fix the poorly worded 'not available' link
