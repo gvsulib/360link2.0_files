@@ -1,0 +1,26 @@
+
+h2.apaformat a img,
+#hamburger {
+	display: none;
+}
+
+.header.mobile-header.sticky-row {
+	display: block;
+}
+
+form {
+	margin: 0; /* Override bootstrap styles */
+}
+
+/* Also, they don't understand padding and margins and proportion. */
+
+.single-results {
+	margin-top: 0 !important;
+}
+
+/* They are hiding and showing a block element nested next to a bunch of inline block elements like a group of dummies. */
+
+.single-results .resource-row a.btn:first-child {
+	display: block !important; /* Be grown ups, ProQuest. Learn about CSS */
+	float: left;
+}
