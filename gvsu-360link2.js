@@ -1,13 +1,17 @@
-setTimeout(function() {
+// Remove the bootstrap styles - we'll build our own for the handful of things we need. 
+	// (They conflict like crazy with our CMS styles.)
+	jQuery('head').find('link[href*="bootstrap"]').remove();
 
-	jQuery(document).ready(function() {
+	// Add the appropriate CMS classes here. ProQuest doesn't understand how templates work, wso we have to hack it
+	jQuery('.sticky-row.expand').attr('id','main').attr('role','main');
+	jQuery('.sticky-row').find('.container-fluid').addClass('content');
 
-		// Remove their terrible CSS
-		jQuery('head').find('link[href*="bootstrap"]').remove();
+	// We need the report a problem link inside the #main container. We can't do that with PQ's terrible template.
+	// So again we have to hack it in there.
+	var thisUrl = 'https://prod.library.gvsu.edu/status/?problem&url=' + encodeURIComponent(window.location);
 
-		// Add custom CSS
-		jQuery('head').append('<link rel="stylesheet" type="text/css" href="https://prod.library.gvsu.edu/labs/360link2.0/gvsu-360link2.css" />');
+	jQuery('.container-fluid.content').append('<div class="hide-print"><br><hr><div class="row"><div class="col-6"></div><div class="col-6 text-right"><a href="' + thisUrl + '" class="cms-report-problem">Report a problem with this page</a></div></div></div>');
 
-	});
-
-}, 500);
+	jQuery('.sticky-row.mobile-footer').removeClass('footer');
+	jQuery('#mobile-action-page').find('.edit-citation').removeClass('text-center');
+	

@@ -1,26 +1,12 @@
-
-h2.apaformat a img,
-#hamburger {
-	display: none;
-}
-
-.header.mobile-header.sticky-row {
-	display: block;
-}
-
-form {
-	margin: 0; /* Override bootstrap styles */
-}
-
-/* Also, they don't understand padding and margins and proportion. */
-
-.single-results {
-	margin-top: 0 !important;
-}
-
-/* They are hiding and showing a block element nested next to a bunch of inline block elements like a group of dummies. */
-
-.single-results .resource-row a.btn:first-child {
-	display: block !important; /* Be grown ups, ProQuest. Learn about CSS */
-	float: left;
-}
+.sticky-row.expand { display: block !important; overflow: auto; }
+    .sticky-row.mobile-footer { display: block !important; overflow: auto; height: auto;}
+    .hide { display: none; }
+    .footer,
+    .mobile-footer { padding: 0; }
+    h2.apaformat { text-transform: none; }
+    .looking-for-label {margin-bottom: 0;font-size: 1.7em;font-weight: bold;}
+    #hamburger { display: none !important; }
+    .header { display: block !important; }
+    #icon-bars { background-image: url(menu.png) no-repeat; }
+    .resource-row .btn.btn-primary.btn-large { float: left; }
+    .link-details {background-color: #ddd; }
