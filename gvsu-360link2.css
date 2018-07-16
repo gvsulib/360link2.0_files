@@ -1,0 +1,14 @@
+.sticky-row.expand { display: block !important; overflow: auto; }
+    .sticky-row.mobile-footer,
+    .sticky-row.mobile-header { display: block !important; overflow: auto; height: auto;}
+    .header { line-height: 1.75 !important; }
+    .hide { display: none; }
+    .footer,
+    .mobile-footer { padding: 0; }
+    h2.apaformat { text-transform: none; }
+    .looking-for-label {margin-bottom: 0;font-size: 1.7em;font-weight: bold;}
+    #hamburger { display: none !important; }
+    .header { display: block !important; }
+    #icon-bars { background-image: url(https://prod.library.gvsu.edu/labs/cms4.1_files/menu.png) no-repeat; }
+    .resource-row .btn.btn-primary.btn-large { float: left; }
+    .link-details {background-color: #ddd; }
