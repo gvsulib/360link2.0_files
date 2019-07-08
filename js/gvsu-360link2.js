@@ -8,7 +8,7 @@
 
 	// We need the report a problem link inside the #main container. We can't do that with PQ's terrible template.
 	// So again we have to hack it in there.
-	var thisUrl = 'https://prod.library.gvsu.edu/status/?problem&url=' + encodeURIComponent(window.location);
+	var thisUrl = '<div id="s-la-widget-9529"></div>';
 
 	jQuery('.container-fluid.content').append('<div class="hide-print"><br><hr><div class="row"><div class="col-6"></div><div class="col-6 text-right"><a href="' + thisUrl + '" class="cms-report-problem">Report a problem with this page</a></div></div></div>');
 
