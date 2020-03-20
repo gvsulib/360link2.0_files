@@ -14,4 +14,9 @@
 
 	jQuery('.sticky-row.mobile-footer').removeClass('footer');
 	jQuery('#mobile-action-page').find('.edit-citation').removeClass('text-center');
+
+		// Alert adding
+	var alertScript = document.createElement('script');
+alertScript.src = 'https://prod.library.gvsu.edu/labs/alert/alert.js';
+document.body.appendChild(alertScript);
 	
